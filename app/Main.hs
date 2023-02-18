@@ -1,8 +1,8 @@
 module Main where
 
 import Text.Read
-import Lib.Quicksort as Q
-import Lib.MergeSort as M
+import Sort.Quicksort (qsort)
+import Sort.MergeSort (msort)
 
 lastN :: Int -> [a] -> [a]
 lastN n xs = drop (length xs - n) xs
@@ -35,7 +35,7 @@ main = do
         else do
         let { sortedList :: [Int]
             -- ; sortedList = qsort ints
-            ; sortedList = M.msort ints
+            ; sortedList = msort ints
             ; prodOfFirst2AndLast :: Int
             ; prodOfFirst2AndLast = getProduct $ getFirstTwoAndLast sortedList
             ; prodOfLast3 :: Int
