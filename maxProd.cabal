@@ -1,26 +1,36 @@
 cabal-version:      2.4
 name:               maxProd
-version:            0.1.0.0
+version:            0.0.1
 
--- A short (one-line) description of the package.
--- synopsis:
+license:            MIT
+license-file:       LICENSE
+copyright:          2023 Khan Mohammad R.
 
--- A longer description of the package.
--- description:
+description:        leetCode 628: Given a list of numbers, find three numbers whose product is maximum and return the maximum product.
 
--- A URL where users can report bugs.
--- bug-reports:
-
--- The license under which the package is released.
--- license:
 author:             Khan Mohammad R.
 maintainer:         codemascot@hotmail.com
+
+homepage:           https://github.com/codemascot/maxProd
+bug-reports:        https://github.com/codemascot/maxProd/issues
+build-type:         Simple
+tested-with:        GHC==8.10.7
+
+extra-source-files: CHANGELOG.md
+                    README.md
 
 -- A copyright notice.
 -- copyright:
 -- category:
 extra-source-files: CHANGELOG.md
 
+library
+  exposed-modules:  Lib.Quicksort
+                  , Lib.MergeSort
+  build-depends:    base ^>=4.14.3.0
+  hs-source-dirs:   src
+  default-language: Haskell2010
+                    
 executable maxProd
     main-is:          Main.hs
 
@@ -30,5 +40,6 @@ executable maxProd
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     build-depends:    base ^>=4.14.3.0
+                    , maxProd
     hs-source-dirs:   app
     default-language: Haskell2010
